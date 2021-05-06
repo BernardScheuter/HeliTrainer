@@ -745,7 +745,6 @@ GameObject:
   - component: {fileID: 975241326}
   - component: {fileID: 975241325}
   - component: {fileID: 975241327}
-  - component: {fileID: 975241328}
   m_Layer: 0
   m_Name: R22_GRP
   m_TagString: Untagged
@@ -799,19 +798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74696662ed249a748ac72358a10d5386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &975241328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975241324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79852fe04d4306448975f98230846a48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: {fileID: 975241327}
 --- !u!1 &1055963773
 GameObject:
   m_ObjectHideFlags: 0
