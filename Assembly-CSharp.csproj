@@ -64,9 +64,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HeliTrainer\Code\Input\Input_base.cs" />
-    <Compile Include="Assets\HeliTrainer\Code\Input\Input_Keyboard.cs" />
-    <Compile Include="Assets\HeliTrainer\Code\Input\testScript.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Input\Input_base.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Input\Input_Controller.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Input\Input_Keyboard.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Input\Input_XboxController.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Input\KeyboardHeli_InputEditor.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Input\testScript.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Input\XboxController_InputEditor.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Rigidbody\Forces.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Rigidbody\Hover.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Rigidbody\RBController.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Rigidbody\RotationForce.cs" />
     <Compile Include="Assets\IndiePixel_Framework\Core\Code\Cameras\IP_CameraSwitcher_Util.cs" />
     <Compile Include="Assets\IndiePixel_Framework\Core\Code\Cameras\IP_RotateAroundPoint_Util.cs" />
     <Compile Include="Assets\IndiePixel_Framework\Core\Code\Data\IP_Player_Data.cs" />
