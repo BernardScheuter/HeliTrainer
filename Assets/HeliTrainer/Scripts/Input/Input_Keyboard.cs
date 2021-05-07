@@ -7,14 +7,17 @@ public class Input_Keyboard : Input_base
 {
     #region Variables
     protected float throttleInput = 0f;
+    protected float stickyThrottle = 0f;
     protected float colletiveInput = 0f;
     protected Vector2 cyclicInput = Vector2.zero; // = shorthand for Vector2(0,0)
     protected float pedalInput = 0f;
     #endregion
 
     #region Properties
-    public float ThrottleInput
+    public float RawThrottleInput
     { get { return throttleInput; } }
+    public float StickyThrottle
+    { get { return stickyThrottle; } }
     public float CollectiveInput
     { get { return colletiveInput; } }
     public Vector2 CyclicInput
@@ -30,10 +33,16 @@ public class Input_Keyboard : Input_base
     protected override void HandleInputs()
     {
         base.HandleInputs();
+
+        // Input Methods
         HandleThrottle();
         HandleCollective();
         HandleCyclic();
         HandlePedal();
+
+        // Utility Methods
+        ClampInputs();
+        HandleStickyThrottle();
     }
 
     /// <summary>
@@ -78,8 +87,13 @@ public class Input_Keyboard : Input_base
         //cyclicInput.x = Mathf.Clamp(cyclicInput.x, -1f, 1f);// oplossing van mij
         //cyclicInput.y = Mathf.Clamp(cyclicInput.y, -1f, 1f);
         pedalInput = Mathf.Clamp(pedalInput, -1f, 1f);
+    }
 
-
+    protected void HandleStickyThrottle() 
+    {
+        stickyThrottle += RawThrottleInput * Time.deltaTime;
+        stickyThrottle = Mathf.Clamp01(stickyThrottle);
+        Debug.Log(stickyThrottle);
     }
     #endregion
 }

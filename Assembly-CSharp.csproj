@@ -65,6 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\HeliTrainer\Scripts\Controllers\Helicopter_Controller.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Controllers\Helicopter_RotorController.cs" />
+    <Compile Include="Assets\HeliTrainer\Scripts\Engines\Heli_Engine.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Input\Input_base.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Input\Input_Controller.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Input\Input_Keyboard.cs" />
