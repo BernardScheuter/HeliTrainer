@@ -9,39 +9,43 @@ public enum InputType
     XboxController,
     Mobile
 }
+[RequireComponent(typeof(Input_Keyboard), typeof(Input_XboxController))]
 public class Input_Controller : MonoBehaviour
 {
     #region Variables
     public InputType inputType = InputType.Keyboard;
 
-    [Header("Input Components")]
-    public Input_Keyboard keyInput;
-    public Input_XboxController xboxInput;
+    [Header("Input Properties")]
+    private Input_Keyboard keyInput;
+    private Input_XboxController xboxInput;
     #endregion
 
     #region Builtin Methods
     // Start is called before the first frame update
     void Start()
     {
-        SetInputType(inputType);
+        keyInput = GetComponent<Input_Keyboard>();
+        xboxInput = GetComponent<Input_XboxController>();
+
+        if (keyInput && xboxInput)
+        {
+            SetInputType(inputType);
+        }
     }
     #endregion
 
     #region Custom Methods
     void SetInputType(InputType type)
     {
-        if (keyInput && xboxInput)
+        if (type == InputType.Keyboard)
         {
-            if (type == InputType.Keyboard)
-            {
-                keyInput.enabled = true;
-                xboxInput.enabled = false;
-            }
-            if (type == InputType.XboxController)
-            {
-                keyInput.enabled = false;
-                xboxInput.enabled = true;
-            }
+            keyInput.enabled = true;
+            xboxInput.enabled = false;
+        }
+        if (type == InputType.XboxController)
+        {
+            keyInput.enabled = false;
+            xboxInput.enabled = true;
         }
     }
     #endregion

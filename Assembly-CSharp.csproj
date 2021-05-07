@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\HeliTrainer\Scripts\Controllers\Helicopter_Controller.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Input\Input_base.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Input\Input_Controller.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Input\Input_Keyboard.cs" />

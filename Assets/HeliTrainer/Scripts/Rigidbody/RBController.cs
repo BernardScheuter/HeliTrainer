@@ -1,33 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CantThinkOfAName;
 
-public class RBController : MonoBehaviour
+namespace CantThinkOfAName
 {
-    #region Variables
-    protected Rigidbody RB;
-    #endregion
-
-    #region BuiltIn Methods
-
-    // Start is called before the first frame update
-    void Start()
+    [RequireComponent(typeof(Rigidbody))]
+    public class RBController : MonoBehaviour
     {
-        RB = GetComponent<Rigidbody>();
-    }
+        #region Variables
+        [Header("Base Properties")]
+        public Transform COG;
+        protected Rigidbody RB;
+        #endregion
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        HandlePhysics();
-    }
-    #endregion
+        #region BuiltIn Methods
 
-    #region Custom Methods
-    protected virtual void HandlePhysics() 
-    { 
-    
+        // Start is called before the first frame update
+        void Start()
+        {
+            RB = GetComponent<Rigidbody>();
+        }
+
+        // Update is called once per frame
+        void FixedUpdate()
+        {
+            HandlePhysics();
+        }
+        #endregion
+
+        #region Custom Methods
+        protected virtual void HandlePhysics()
+        {
+
+        }
+        #endregion
     }
-    #endregion
 }
