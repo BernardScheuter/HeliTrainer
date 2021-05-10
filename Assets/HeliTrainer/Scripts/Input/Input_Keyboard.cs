@@ -9,6 +9,7 @@ public class Input_Keyboard : Input_base
     protected float throttleInput = 0f;
     protected float stickyThrottle = 0f;
     protected float colletiveInput = 0f;
+    protected float stickyCollective = 0f;
     protected Vector2 cyclicInput = Vector2.zero; // = shorthand for Vector2(0,0)
     protected float pedalInput = 0f;
     #endregion
@@ -20,6 +21,9 @@ public class Input_Keyboard : Input_base
     { get { return stickyThrottle; } }
     public float CollectiveInput
     { get { return colletiveInput; } }
+    public float StickyCollective
+    { get { return stickyCollective; } }
+
     public Vector2 CyclicInput
     { get { return cyclicInput; } }
     public float PedalInput
@@ -43,6 +47,7 @@ public class Input_Keyboard : Input_base
         // Utility Methods
         ClampInputs();
         HandleStickyThrottle();
+        HandleStickyCollective();
     }
 
     /// <summary>
@@ -52,7 +57,6 @@ public class Input_Keyboard : Input_base
     {
         throttleInput = Input.GetAxis("Throttle");
     }
-
     /// <summary>
     /// Handles the lift up of the chopper
     /// </summary>
@@ -93,7 +97,11 @@ public class Input_Keyboard : Input_base
     {
         stickyThrottle += RawThrottleInput * Time.deltaTime;
         stickyThrottle = Mathf.Clamp01(stickyThrottle);
-        Debug.Log(stickyThrottle);
+    }
+    protected void HandleStickyCollective()
+    {
+        stickyCollective += -colletiveInput * Time.deltaTime;
+        stickyCollective = Mathf.Clamp01(stickyCollective);
     }
     #endregion
 }

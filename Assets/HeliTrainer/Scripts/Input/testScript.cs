@@ -13,6 +13,6 @@ using CantThinkOfAName;
         // Update is called once per frame
         void Update()
         {
-        Debug.Log(CyclicInput);
+        //Debug.Log(CyclicInput);
         }
     }

@@ -15,7 +15,18 @@ namespace CantThinkOfAName
         public Helicopter_RotorController rotorCtrl;
 
         private Input_Controller input;
+        private Heli_Characteristics characteristics;
         #endregion
+
+        #region Buildin Methods
+        public override void Start()
+        {
+            base.Start();
+            characteristics = GetComponent<Heli_Characteristics>();
+        }
+
+        #endregion
+
 
         #region Custom Methods
         protected override void HandlePhysics()
@@ -45,7 +56,13 @@ namespace CantThinkOfAName
                 rotorCtrl.UpdateRotors(input, engines[0].CurrentRPM);
             }
         }
-        protected virtual void HandleCharacteristics() { }
+        protected virtual void HandleCharacteristics() 
+        {
+            if (characteristics) 
+            {
+                characteristics.UpdateCharacteristics();
+            }
+        }
         #endregion
     }
 

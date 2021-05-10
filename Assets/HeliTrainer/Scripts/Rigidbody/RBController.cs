@@ -16,7 +16,7 @@ namespace CantThinkOfAName
         #region BuiltIn Methods
 
         // Start is called before the first frame update
-        void Start()
+        public virtual void Start()
         {
             RB = GetComponent<Rigidbody>();
         }

@@ -35,6 +35,10 @@ public class Input_Controller : MonoBehaviour
     public float CollectiveInput
     { get { return collectiveInput; } }
 
+    private float stickyCollective;
+    public float StickyCollective
+    { get { return stickyCollective; } }
+
     private float pedalInput;
     public float PedalInput
     { get { return pedalInput; } }
@@ -63,16 +67,18 @@ public class Input_Controller : MonoBehaviour
                     throttleInput = keyInput.RawThrottleInput;
                     collectiveInput = keyInput.CollectiveInput;
                     cyclicInput = keyInput.CyclicInput;
-                    throttleInput = keyInput.RawThrottleInput;
+                    pedalInput = keyInput.PedalInput;
                     stickyThrottle = keyInput.StickyThrottle;
+                    stickyCollective = keyInput.StickyCollective;
                     break;
 
                 case InputType.XboxController:
                     throttleInput = xboxInput.RawThrottleInput;
                     collectiveInput = xboxInput.CollectiveInput;
                     cyclicInput = xboxInput.CyclicInput;
-                    throttleInput = xboxInput.RawThrottleInput;
+                    pedalInput = xboxInput.PedalInput;
                     stickyThrottle = xboxInput.StickyThrottle;
+                    stickyCollective = xboxInput.StickyCollective;
                     break;
 
                 default:
