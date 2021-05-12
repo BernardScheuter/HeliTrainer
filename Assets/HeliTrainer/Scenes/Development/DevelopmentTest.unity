@@ -407,8 +407,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351887862}
-  m_LocalRotation: {x: -0.019302253, y: -0.8065387, z: -0.026373195, w: 0.59027725}
-  m_LocalPosition: {x: 13.233512, y: 3.2396085, z: 10.7232485}
+  m_LocalRotation: {x: 0.029043518, y: -0.9514216, z: 0.09479962, w: 0.2914902}
+  m_LocalPosition: {x: 15.719116, y: 8.528366, z: 25.924639}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -939,7 +939,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 1
   m_AngularDrag: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -997,6 +997,8 @@ MonoBehaviour:
   mainRotor: {fileID: 133509906}
   tailForce: 2
   cyclicForce: 2
+  cyclicForceMultiply: 50
+  autoLevelForce: 4
 --- !u!1 &1371643465
 GameObject:
   m_ObjectHideFlags: 0
