@@ -60,7 +60,7 @@ namespace CantThinkOfAName
         {
             if (characteristics) 
             {
-                characteristics.UpdateCharacteristics();
+                characteristics.UpdateCharacteristics(RB, input);
             }
         }
         #endregion

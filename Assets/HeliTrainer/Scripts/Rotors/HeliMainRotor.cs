@@ -13,6 +13,14 @@ namespace CantThinkOfAName
         public float maxPitch = 25f;
         #endregion
 
+        #region Properties
+        private float currentRPMs;
+        public float CurrentRPMs 
+        {
+            get { return currentRPMs; }
+        }
+        #endregion
+
         #region Default Methods
         void Start()
         {
@@ -24,6 +32,7 @@ namespace CantThinkOfAName
         public void UpdateRotor(float dps, Input_Controller input)
         {
             //Debug.Log("Updating Main Rotor\ndps value: " + dps);
+            currentRPMs = (dps / 360) * 60f;
             transform.Rotate(Vector3.up, dps);
             // Pitch blade up/down
             if (LRotor && RRotor)

@@ -75,10 +75,7 @@
     <Compile Include="Assets\HeliTrainer\Scripts\Input\KeyboardHeli_InputEditor.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Input\testScript.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Input\XboxController_InputEditor.cs" />
-    <Compile Include="Assets\HeliTrainer\Scripts\Rigidbody\Forces.cs" />
-    <Compile Include="Assets\HeliTrainer\Scripts\Rigidbody\Hover.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Rigidbody\RBController.cs" />
-    <Compile Include="Assets\HeliTrainer\Scripts\Rigidbody\RotationForce.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Rotors\HeliMainRotor.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Rotors\HeliTailRotor.cs" />
     <Compile Include="Assets\HeliTrainer\Scripts\Rotors\IHeliRotor.cs" />
@@ -102,6 +99,7 @@
     <Compile Include="Assets\IndiePixel_Framework\UI\Code\IP_UI_System.cs" />
     <Compile Include="Assets\IndiePixel_Framework\UI\Code\Loading\IP_Loader_Manager.cs" />
     <Compile Include="Assets\IndiePixel_Framework\UI\Code\Screen_Types\IP_Timed_Screen.cs" />
+    <Compile Include="Assets\Intro_Heli_Physics\Code\Scripts\Rigidbodies\IP_Base_RBController.cs" />
     <None Include="Assets\IndiePixel_Framework\Core\Code\Shaders\IP_Basic_LitVertexColor.shader" />
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>F:/Unity Projects/HeliTrainer/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
