@@ -56,6 +56,14 @@ namespace IndiePixel
 
 
         #region Custom Methods
+
+        void test() 
+        {
+            if (completed) 
+            {
+                Debug.Log("Jeps, varriable used!");
+            }
+        }
         void InitializeSequence()
         {
             if(m_Actions.Count > 0)
